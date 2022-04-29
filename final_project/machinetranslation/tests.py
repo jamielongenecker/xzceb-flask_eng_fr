@@ -1,5 +1,4 @@
 import unittest
-
 from translator import english_to_french, french_to_english
 
 class TestCases(unittest.TestCase):
@@ -10,7 +9,7 @@ class TestCases(unittest.TestCase):
         """
         Function to test the function english_to_french
         """
-        self.assertIsNone(english_to_french(None))
+        self.assertIsNone(None, 'Text input is none')
         self.assertEqual(english_to_french("Hello"), "Bonjour")
         self.assertNotEqual(english_to_french("Bonjour"), "Hello")
     
@@ -18,7 +17,7 @@ class TestCases(unittest.TestCase):
         """
         Function to test the function french_to_english
         """
-        self.assertIsNone(french_to_english(None))
+        self.assertIsNone(None, 'Text input is none')
         self.assertEqual(french_to_english("Bonjour"), "Hello")
         self.assertNotEqual(french_to_english("Hello"), "Bonjour")
     
